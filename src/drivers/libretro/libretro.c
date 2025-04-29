@@ -2665,7 +2665,9 @@ static void FCEUD_UpdateInput(void)
                   }
 
                   if (turbo_button_state[player][i]) {
-                     turbo_button_state[player][i]--;
+                     if (!nes_input.turbo_delay == 1) {
+                        turbo_button_state[player][i]--;
+                     }
                      input_buf |= turbomap[i].nes;
                   }
                   turbo_button_toggle[player][i]++;
