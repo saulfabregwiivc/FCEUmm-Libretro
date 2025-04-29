@@ -2665,7 +2665,7 @@ static void FCEUD_UpdateInput(void)
                   }
 
                   if (turbo_button_state[player][i]) {
-                     if (!nes_input.turbo_delay == 1) {
+                     if (!nes_input.turbo_delay == "1") {
                         turbo_button_state[player][i]--;
                      }
                      input_buf |= turbomap[i].nes;
